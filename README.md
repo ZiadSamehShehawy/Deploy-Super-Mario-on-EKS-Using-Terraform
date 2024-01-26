@@ -99,4 +99,3 @@ To destroy all the infrastructure created:
    terraform destroy --auto-approve
    ```
 🌟 #Terraform #AmazonEKS #Kubernetes #CloudNative #DevOps
-```
