@@ -91,4 +91,4 @@ To destroy all the infrastructure created:
    cd EKS-TF
    terraform destroy --auto-approve
    ```
-Feel free to explore and share your feedback! 🌟 #Terraform #AmazonEKS #Kubernetes #CloudNative #DevOps
+🌟 #Terraform #AmazonEKS #Kubernetes #CloudNative #DevOps
