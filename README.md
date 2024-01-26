@@ -1,7 +1,5 @@
 # Deploying Super Mario on Amazon EKS with Terraform
 
-🚀 Excited to share my recent project where I successfully deployed Super Mario on Amazon Elastic Kubernetes Service (EKS) using Terraform. This enables seamless application deployment and management in an automatically managed Kubernetes environment.
-
 ## Technologies Used:
 - **Terraform:** Infrastructure as Code (IaC) for configuration.
 - **Amazon EKS:** Managing cluster elements and automatic scaling.
