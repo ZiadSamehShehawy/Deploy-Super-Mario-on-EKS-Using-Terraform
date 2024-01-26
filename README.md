@@ -45,8 +45,17 @@ Ensure the following dependencies are installed:
    kubectl version
    ```
 
+4. **Terraform:**
+   ```bash
+   # Install Terraform
+   wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list > /dev/null
+   sudo apt update
+   sudo apt install terraform -y
+   ```
+
 ## Deployment Steps:
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    mkdir super_mario
    cd super_mario
@@ -54,30 +63,30 @@ Ensure the following dependencies are installed:
    cd Deploy-Super-Mario-on-EKS-Using-Terraform/EKS-TF
    ```
 
-2. Initialize and validate Terraform:
+2. **Initialize and validate Terraform:**
    ```bash
    terraform init
    terraform validate
    ```
 
-3. Plan and apply Terraform changes:
+3. **Plan and apply Terraform changes:**
    ```bash
    terraform plan
    terraform apply --auto-approve
    ```
 
-4. Configure kubectl with EKS cluster details:
+4. **Configure kubectl with EKS cluster details:**
    ```bash
    aws eks update-kubeconfig --name EKS_CLOUD --region us-east-2
    ```
 
-5. Apply Kubernetes deployment and service configurations:
+5. **Apply Kubernetes deployment and service configurations:**
    ```bash
    kubectl apply -f deployment.yaml
    kubectl apply -f service.yaml
    ```
 
-6. Verify the deployment:
+6. **Verify the deployment:**
    ```bash
    kubectl get all
    kubectl describe service mario-service
@@ -92,3 +101,4 @@ To destroy all the infrastructure created:
    terraform destroy --auto-approve
    ```
 🌟 #Terraform #AmazonEKS #Kubernetes #CloudNative #DevOps
+```
